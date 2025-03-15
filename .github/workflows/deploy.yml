@@ -1,0 +1,39 @@
+name: Deploy Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    input:
+      token:
+        description: 'Token to access the repository'
+        required: true
+        default: ''
+      user:
+        description: 'User to access the repository'
+        required: true
+        default: ''
+      repo:
+        description: 'Path to access the repository'
+        required: true
+        default: ''
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: main
+
+      - name: Deploy with docker
+        run: |
+          docker build \
+            --build-arg TOKEN=${{ secrets.TOKEN }} \
+            --build-arg USER=${{ secrets.USER }} \
+            --build-arg REPO=${{ secrets.REPO }} \
+            --build-arg GIT_DOMAIN=atomgit.com \
+            --build-arg BRANCH=pages \
+            .
