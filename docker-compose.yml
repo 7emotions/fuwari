@@ -1,0 +1,14 @@
+
+version: '3.5'
+services:
+  blog:
+    container_name: blog
+    build:
+      args:
+        - TOKEN=${TOKEN}
+        - USER=${USER}
+        - REPO=${REPO}
+        - GIT_DOMAIN=${GIT_DOMAIN}
+        - BRANCH=${BRANCH}
+      context: .
+      dockerfile: Dockerfile
