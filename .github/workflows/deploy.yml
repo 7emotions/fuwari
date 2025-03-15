@@ -7,14 +7,17 @@ on:
   workflow_dispatch:
     input:
       token:
+        type: string
         description: 'Token to access the repository'
         required: true
         default: ''
       user:
+        type: string
         description: 'User to access the repository'
         required: true
         default: ''
       repo:
+        type: string
         description: 'Path to access the repository'
         required: true
         default: ''
