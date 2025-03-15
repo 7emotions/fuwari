@@ -39,6 +39,6 @@ COPY --from=builder /blog/dist /blog
 RUN git config --global user.email "deployment@docker.com" && \
     git config --global user.name "Docker Deployment"
 
-RUN git init && git remote add origin https://${USER}:${TOKEN}@${GIT_DOMAIN}/${REPO} && \
+RUN git init && git remote add origin https://${USER}:${TOKEN}@${GIT_DOMAIN}/${USER}/${REPO}.git && \
     git switch -c ${BRANCH} && git add . && git commit -m "Deploy by docker" && \
     git push -f origin ${BRANCH}
