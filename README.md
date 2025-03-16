@@ -1,7 +1,33 @@
+<!-- PROJECT SHIELDS -->
+
+<!-- PROJECT LOGO -->
+<br />
+
+<p align="center">  <a href="https://github.com/7emotions/fuwari/">
+  <img src="https://github.com/user-attachments/assets/22fd6aa5-6299-4e6d-961f-ea2bd7f93724" alt="Logo" >
+  </a>
+  <h3 align="center">Fuwari</h3>
+  <p align="center">
+    <br />
+    <a href="https://github.com/7emotions/fuwari"><strong>探索本项目的文档 »</strong></a><br />
+    <br />
+    <a href="https://github.com/7emotions/fuwari/releases">查看发布</a>
+    ·
+    <a href="https://github.com/7emotions/fuwari/issues">报告Bug</a>
+    ·
+    <a href="https://github.com/7emotions/fuwari/issues">提出新特性</a>
+  </p>
+</p>
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
 # 前言
 
-手动部署以及博客配置参考[国内自动化静态博客搭建](src/content/posts/blog-guide.md)。
+手动部署以及博客配置参考[国内自动化静态博客搭建](https://7emotions.atomgit.net/blog/posts/blog-guide/)。
 
 
 # 准备
@@ -56,15 +82,18 @@
 
 在`Github`仓库中，点击`Actions`，选择`Deploy Pages`，点击`Run workflow`，选择分支为`main`，点击`Run workflow`。
 
-![alt text](src/content/posts/images/onetap/1.png)
+![image](https://github.com/user-attachments/assets/c52c0097-046b-414c-9fa2-2955b4bb8dfd)
+
 
 刷新页面，可以看到`Github Action`正在运行。
 
-![alt text](src/content/posts/images/onetap/2.png)
+![image](https://github.com/user-attachments/assets/c7180760-f7d5-4757-b8f0-17a57f8c3c17)
+
 
 约莫1分钟后，出现如下提示，说明`Github Action`运行完成。
 
-![alt text](src/content/posts/images/onetap/3.png)
+![image](https://github.com/user-attachments/assets/87f2afe5-2e09-4bfb-bf59-234642c01284)
+
 
 当`Github Action`运行完成后，你可以访问`https://<username>.atomgit.net/<repo-name>`查看你的静态博客。
 
@@ -116,3 +145,15 @@ docker-compose up -d
 # 博文发布
 
 无论是`Github Action`部署还是`Docker`部署，每次向远端推送博文，会自动触发`Github Action`，生成静态博客的站点文件，并将其部署到`AtomGit`上。
+
+[your-project-path]:7emotions/fuwari
+[contributors-shield]: https://img.shields.io/github/contributors/7emotions/fuwari.svg?style=flat-square
+[contributors-url]: https://github.com/7emotions/fuwari/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/7emotions/fuwari.svg?style=flat-square
+[forks-url]: https://github.com/7emotions/fuwari/network/members
+[stars-shield]: https://img.shields.io/github/stars/7emotions/fuwari.svg?style=flat-square
+[stars-url]: https://github.com/7emotions/fuwari/stargazers
+[issues-shield]: https://img.shields.io/github/issues/7emotions/fuwari.svg?style=flat-square
+[issues-url]: https://img.shields.io/github/issues/7emotions/fuwari.svg
+[license-shield]: https://img.shields.io/github/license/7emotions/fuwari.svg?style=flat-square
+[license-url]: https://github.com/7emotions/fuwari/blob/master/LICENSE.txt
